@@ -8,6 +8,7 @@ struct node
 };
 
 class fifo
+{
 private:
 	node *start;
 	node *end;
