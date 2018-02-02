@@ -1,6 +1,6 @@
 #include <iostream>
-#include "bfs.h"
 #include <fstream>
+#include "fifo.h"
 #include <cmath>
 using namespace std;
 
@@ -28,20 +28,10 @@ int main(int argc, char *argv[])
 	string puzzle;
 	if(file)getline(file, puzzle);file.close();
 	//bfs test(puzzle);
-	string big = "xBBBBBBWWWWWW";
-	//YES
-	//YES
-	//YES
-	//WE CAN USE THIS HASH FUNCTION STILL BY SIMPLY CHECKING IF THE VALUE
-	//HASHED TO STORES ZERO OR NOT, INSTEAD OF STORING THE DUMB FUCKING 
-	//STIRNGS THERE GOD DAMNIT I AM SUCH A FUCKING IDIOT.
-	int table[Hash(big)] = {0};	
-	cout << pow(3, big.length()) - Hash(big) << endl;
-	int tsize = pow(3, big.length());
-	int tabl2[tsize] = {0};
-	//ALRIGHT SO WHEN YOU SET THIS UP, TAKE THE INPUT STRING, INITIALIZE THE
-	//VISITED ARRAY TO BE AN INT ARRAY OF SIZE POW(3,INIT.LENGTH()) AND WE 
-	//GOOD
-	//
+	
+	//visited table size
+	int vtsize = pow(3, puzzle.length());
+	bool visited[vtsize] = {0};  
+
 	return 0;
 }
