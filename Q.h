@@ -11,23 +11,20 @@ class Q
 		node *t;
 	public:
 		Q(){h = NULL; t=NULL;empty = true;}
-
-		void nQ(node n)
+/*
+	}*/
+		void nQ(node *n)
 		{
-			node *newnode = new node();
-			newnode->state = n.state;
-			newnode->parent = n.parent;
-			newnode->action = n.action;
-			newnode->cost = n.cost;
 			if(t == NULL)
 			{
-				t = newnode;
+				t = n;
 				empty = false;
 			}
 			else 
-				newnode->next = h;
-			h = newnode;
+				n->next = h;
+			h = n;
 		}
+
 
 		node *dQ()
 		{
